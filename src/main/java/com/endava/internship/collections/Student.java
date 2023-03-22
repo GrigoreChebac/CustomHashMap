@@ -5,8 +5,8 @@ import java.time.LocalDate;
 /**
  * The class that defines the element that will be contained by your collection
  */
-public class Student //TODO consider implementing any interfaces necessary for your collection
-{
+public class Student {
+    //TODO consider implementing any interfaces necessary for your collection
     private String name;
     private LocalDate dateOfBirth;
     private String details;
@@ -17,11 +17,32 @@ public class Student //TODO consider implementing any interfaces necessary for y
         this.details = details;
     }
 
-    public String getName() { return name; }
+    public String getName() {
+        return name;
+    }
 
-    public LocalDate getDateOfBirth() { return dateOfBirth; }
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
 
-    public String getDetails() { return details; }
+    public String getDetails() {
+        return details;
+    }
+
+    public String getStudentKey() {
+        return getName() + getDateOfBirth();
+    }
+
+    @Override
+    public int hashCode() {
+        String studentId = getStudentKey();
+        int interimHash = 1;
+        for (int sing : studentId.toCharArray()) {
+            interimHash *= sing;
+        }
+        return studentId.hashCode() + interimHash >>> 1;
+
+    }
 
     /*
     TODO consider overriding any methods for this object to function properly within a collection:
@@ -30,3 +51,4 @@ public class Student //TODO consider implementing any interfaces necessary for y
         placed before the younger student in an ordered student list.
     */
 }
+
