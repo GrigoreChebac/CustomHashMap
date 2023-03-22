@@ -1,7 +1,6 @@
 package com.endava.internship.collections;
 
 import java.time.LocalDate;
-
 /**
  * The class that defines the element that will be contained by your collection
  */

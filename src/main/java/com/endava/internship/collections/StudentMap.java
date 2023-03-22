@@ -1,7 +1,6 @@
 package com.endava.internship.collections;
 
 import java.util.*;
-
 public class StudentMap implements Map<Student, Integer> {
 
     private int size = 1;
