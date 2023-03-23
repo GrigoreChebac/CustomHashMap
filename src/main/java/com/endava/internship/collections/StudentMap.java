@@ -1,7 +1,6 @@
 package com.endava.internship.collections;
 
 import java.util.*;
-
 public class StudentMap implements Map<Student, Integer> {
 
     private int size = 1;
@@ -96,9 +95,12 @@ public class StudentMap implements Map<Student, Integer> {
         int hash = student.hashCode() % size;
         StudentNode temp = table[hash];
 
-        if (temp.getKey().getStudentKey().equals(key)) {
+
+        if (get(o) == null) {
+           return null;
+        } else if(temp.getKey().getStudentKey().equals(key)) {
             table[hash] = temp.getNext();
-            return null;
+            return temp.value;
         }
 
         while (temp.getNext() != null) {
