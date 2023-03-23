@@ -22,10 +22,10 @@ public class Main {
         Student student11 = new Student("qqIron11 ", LocalDate.of(2039, 5, 7), "asddgf");
 
         hashStudentMap.put(student1, 1);
-        hashStudentMap.put(student2, 2);
-        hashStudentMap.put(student3, 3);
-        hashStudentMap.put(student4, 4);
-        hashStudentMap.put(student5, 5);
+//        hashStudentMap.put(student2, 2);
+//        hashStudentMap.put(student3, 3);
+//        hashStudentMap.put(student4, 4);
+//        hashStudentMap.put(student5, 5);
 
 
         anotherStudentMap.put(student6, 6);
@@ -34,16 +34,7 @@ public class Main {
         anotherStudentMap.put(student9, 9);
         anotherStudentMap.put(student1, 10);
 
-        HashMap<Student, Integer> test = new HashMap<>();
-
-        test.put(student3,3);
-        test.put(student2,3);
-        test.put(student1,3);
-        test.put(student4,3);
-
-        Collection<Integer> test1 = test.values();
-
-        System.out.println(hashStudentMap.values());
+        System.out.println(hashStudentMap.remove(student1));
 
 
     }
